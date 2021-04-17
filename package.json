@@ -1,0 +1,40 @@
+{
+  "name": "message-app",
+  "version": "1.0.1",
+  "description": "Simple Message Application using Node(Express) and React",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "build": "tsc",
+    "prestart": "npm run build",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "cd client && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "messageApp"
+  },
+  "keywords": [
+    "nidhro"
+  ],
+  "author": "Mohammad Amdadul Islam Nidhro",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.12.4",
+    "react-router-dom": "^5.2.0",
+    "socket.io": "^4.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.2",
+    "nodemon": "^2.0.7"
+  }
+}
